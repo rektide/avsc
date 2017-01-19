@@ -1,0 +1,30 @@
+enum Duration:byte {
+  FOREVER = 0;
+  ONCE = 1;
+  REPEATING = 2;
+}
+
+enum Currency:byte {
+  DOLLAR = 0;
+  EURO = 1;
+}
+
+
+table Coupon {
+  id:string;
+  object:string;
+  livemode:bool;
+  created:long;
+  duration:Duration;
+  metadata:[byte];
+  times_redeemed:int;
+  valid:bool;
+  amount_off:int;
+  currency:Currency;
+  duration_in_months:int;
+  max_redemptions:int;
+  percent_off:int;
+  redeem_by:int;
+}
+
+root_type Coupon;
